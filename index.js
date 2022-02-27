@@ -101,7 +101,7 @@ function deleteItem(index) {
 
 todoList.onclick = async (e) => {
   //alert("yes on add btn");
-  let response = await fetch(`${baseUrl}/deletebyid`, {
+  let response = await fetch(`${baseUrl}/deletebyid/${e.target.id}`, {
   method:"DELETE",
   headers: {
       'content-Type': 'application/json',
